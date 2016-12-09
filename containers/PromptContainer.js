@@ -11,7 +11,7 @@ var PromptContainer = React.createClass({
 		  username: ''
 		}
 	},
-
+	
 	onUpdateUser: function(e){
 		this.setState({
 			username: e.target.value
