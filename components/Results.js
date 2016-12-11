@@ -5,6 +5,7 @@ var UserDetails = require('./UserDetails');
 var UserDetailsWrapper = require('./UserDetailsWrapper');
 var Link = require('react-router').Link;
 var MainContainer = require('./MainContainer');
+var Loading = require('./Loading');
 
 function puke (object) {
 	return (
@@ -27,7 +28,7 @@ function StartOver () {
 function Results (props) {
     if(props.isLoading === true) {
         return (
-            <p>Loading...</p>
+            <Loading text='One Moment' speed={100} />
         )
     }
 
@@ -58,7 +59,7 @@ function Results (props) {
     );
 }
 
-Results.PropTypes = {
+Results.propTypes = {
     isLoading: PropTypes.bool.isRequired,
     scores: PropTypes.array.isRequired,
     playersInfo: PropTypes.array.isRequired,

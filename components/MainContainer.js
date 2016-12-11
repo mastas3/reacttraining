@@ -1,5 +1,5 @@
 var React = require('react');
-var styles = require('../styles').transparentBg;
+var styles = require('../styles');
 
 function MainContainer(props) {
     return (
